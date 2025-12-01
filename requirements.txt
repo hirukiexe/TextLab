@@ -1,0 +1,5 @@
+pillow
+telethon
+cryptg
+aiohttp
+hachoir
