@@ -1,14 +1,14 @@
 FROM python:3.11-slim
 
-# Work directory
+# Set working directory
 WORKDIR /app
 
-# Install dependencies first
+# Install dependencies
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy all project files (bot/, core/, handlers/, etc.)
-COPY . .
+# Copy everything from bot/ into /app
+COPY bot/ ./
 
-# Run the bot by directly executing __main__.py
-CMD ["python3", "bot/__main__.py"]
+# Run the bot directly
+CMD ["python3", "__main__.py"]
