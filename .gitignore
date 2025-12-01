@@ -1,0 +1,60 @@
+# Python cache
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+# Virtual Environment
+venv/
+env/
+.venv/
+ENV/
+
+# Telethon session files
+*.session
+*.session-journal
+session/
+sessions/
+telethon_session/
+auth/
+
+# User generated login files
+*.json
+*.txt
+config.ini
+*.env
+
+# Cache & Temp
+.cache/
+temp/
+tmp/
+*.log
+
+# Media
+downloads/
+media/
+images/
+photos/
+files/
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# IDE
+.vscode/
+.idea/
+
+# Build
+build/
+dist/
+*.spec
+
+# SQLite / DB
+*.db
+*.sqlite3
+
+# Backup
+*.bak
+*.swp
+*.swo
