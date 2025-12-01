@@ -2,12 +2,12 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Copy requirements first for cache efficiency
+# Install dependencies
 COPY requirements.txt .
-
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy remaining project files
+# Copy complete project
 COPY . .
 
-CMD ["python3", "bot"]
+# Run package (because entrypoint is bot/__main__.py)
+CMD ["python3", "-m", "bot"]
