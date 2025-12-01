@@ -2,12 +2,15 @@ FROM python:3.11-slim
 
 WORKDIR /app
 
-# Make /app the python module root
-ENV PYTHONPATH=/app
+# Set Python module root to /app/bot
+ENV PYTHONPATH=/app/bot
 
+# Install requirements
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
+# Copy project files
 COPY . .
 
-CMD ["python3", "-m", "bot"]
+# Run entry point
+CMD ["python3", "/app/bot/__main__.py"]
